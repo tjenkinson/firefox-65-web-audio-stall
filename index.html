@@ -9,5 +9,17 @@
   <button type="button" id="go">GO</button>
   <br />
   <audio controls crossorigin="anonymous" src="https://s3-us-west-2.amazonaws.com/soundtest.soundcloud.com/maestro/test-assets/test_audio.mp3" id="audio"></audio>
+  <script type="text/javascript">
+const audio = document.getElementById('audio');
+const context = new AudioContext();
+const node = context.createMediaElementSource(audio);
+node.connect(context.destination);
+
+document.getElementById('go').addEventListener('click', () => {
+  context.resume();
+  audio.play();
+  window.setTimeout(() => audio.currentTime = 5, 2000);
+});
+  </script>
 </body>
 </html>
