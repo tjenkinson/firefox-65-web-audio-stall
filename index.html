@@ -6,6 +6,9 @@
   <title>firefox 65 web audio stall</title>
 </head>
 <body>
+  <p>When go is clicked playback will be started. After 2 seconds a seek will be performed to 5s.<p>
+  <p>Expected: playback continous from 5 seconds.</p>
+  <p>Actual: In firefox 65 playback stalls</p>
   <button type="button" id="go">GO</button>
   <br />
   <audio controls crossorigin="anonymous" src="https://s3-us-west-2.amazonaws.com/soundtest.soundcloud.com/maestro/test-assets/test_audio.mp3" id="audio"></audio>
